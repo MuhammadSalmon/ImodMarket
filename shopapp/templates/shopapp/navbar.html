@@ -1,0 +1,118 @@
+<style>
+    .fixed-nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: white;
+    }
+
+    .nav-container {
+        margin-top: 5rem;
+        /* Adjust based on the height of your navbar */
+    }
+
+    .input-style {
+        width: 90%;
+        margin: 0 auto 1rem;
+        display: block;
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+    }
+</style>
+<nav class="bg-white shadow-lg fixed-nav">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+            <div class="flex space-x-4">
+                <!-- Logo -->
+                <div>
+                    <a href="{% url 'shopapp:home' %}"
+                        class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
+                        <svg class="h-6 w-6 mr-1 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 11c.36 0 .708-.097 1-.27m-2 0c-.292.173-.64.27-1 .27m2 0V4a8 8 0 10-8 8h8z" />
+                        </svg>
+                        <span class="font-bold">IMOD</span>
+                    </a>
+                </div>
+
+                <!-- Primary Nav -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="{% url 'shopapp:home' %}" class="py-5 px-3 text-gray-700 hover:text-gray-900">Главное</a>
+                    <a href="{% url 'shopapp:product' %}"
+                        class="py-5 px-3 text-gray-700 hover:text-gray-900">Продукты</a>
+                    <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Услуги</a>
+                    <a href="{% url 'cart:cart_detail' %}"
+                        class="py-5 px-3 text-gray-700 hover:text-gray-900">Корзина</a>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="hidden md:flex items-center">
+
+            </div>
+
+            <!-- Secondary Nav -->
+            <div class="hidden md:flex items-center space-x-1">
+                {% if user.is_authenticated %}
+                <a href="{% url 'myaccount:logout' %}" class="py-5 px-3 text-gray-700 hover:text-gray-900">Logout</a>
+                {% else %}
+                <a href="{% url 'myaccount:login' %}" class="py-5 px-3 text-gray-700 hover:text-gray-900">Login</a>
+                <a href="{% url 'myaccount:register' %}"
+                    class="py-2 px-3 bg-blue-500 text-white rounded hover:bg-blue-400 transition duration-300">Sign
+                    Up</a>
+                {% endif %}
+            </div>
+
+            <!-- Mobile button -->
+            <div class="md:hidden flex items-center">
+                <button class="mobile-menu-button">
+                    <svg class="w-6 h-6 text-gray-700 hover:text-gray-900" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu hidden md:hidden">
+        <!-- Search Bar in Mobile View -->
+
+        <!-- Main Menu Items -->
+        <a href="{% url 'shopapp:home' %}" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200">Главное</a>
+        <a href="{% url 'shopapp:product_list' %}"
+            class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200">Продукты</a>
+        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200">Услуги</a>
+        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200">Корзина</a>
+
+        <!-- Authentication Links -->
+        {% if user.is_authenticated %}
+        <a href="{% url 'myaccount:logout' %}"
+            class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200">Logout</a>
+        {% else %}
+        <a href="{% url 'myaccount:login' %}" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200">Login</a>
+        <a href="{% url 'myaccount:register' %}"
+            class="block py-2 px-4 text-sm bg-blue-500 text-white rounded hover:bg-blue-400 transition duration-300">Sign
+            Up</a>
+        {% endif %}
+    </div>
+</nav>
+
+<div class="nav-container">
+    <!-- Your main content here -->
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    });
+</script>

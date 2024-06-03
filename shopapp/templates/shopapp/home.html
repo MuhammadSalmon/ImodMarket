@@ -1,0 +1,199 @@
+<!-- templates/shopapp/home.html -->
+{% extends 'shopapp/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Home - Our Factory</title>
+{% endblock title %}
+
+{% block container %}
+<div class="bg-gray-100 py-10 lg:py-20 text-center rounded-lg shadow-lg mb-10">
+    <div class="container mx-auto lg:flex lg:items-center lg:justify-between">
+        <!-- Images Section -->
+        <div class="mb-4 lg:w-1/2 lg:mb-0">
+            <!-- First Image -->
+            <img src="{% static 'images/first_image.jpg' %}" alt="First Image" class="img-fluid mb-4"
+                style="max-width: 100%;">
+            <!-- Second Image -->
+
+        </div>
+
+        <!-- Text Section -->
+        <div class="lg:w-1/2 lg:pl-12">
+            <h1 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">Добро пожаловать в наш завод Имод</h1>
+            <p class="text-gray-600 text-lg mb-6">31 октября Основатель мира и национального единства — Лидер нации,
+                Президент Республики Таджикистан уважаемый Эмомали Рахмон и Председатель Маджлиси милли Маджлиси Оли
+                Республики Таджикистан, Председатель города Душанбе уважаемый Рустами Эмомали в районе Сино столицы
+                открыли
+                предприятие по производству электрооборудования «Имод» Открытого акционерного общества «ТГЭМ».</p>
+            <a href="#about" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600">Узнать больше</a>
+        </div>
+    </div>
+</div>
+
+<!-- About Section -->
+<div id="about" class="mb-16 ">
+    <br>
+    <br>
+    <br>
+    <h2 class="text-3xl font-bold text-center mb-8">О нашем заводе</h2>
+    <p class="text-gray-700 text-lg mb-4">Предприятие возведено на площади 7 гектаров земли в соответствии с
+        современными нормами и международными стандартами, а здания под строительство составляют 40 тысяч квадратных
+        метров.</p>
+    <p class="text-gray-700 text-lg mb-4">После возведения предприятия здесь появилась возможность обеспечить
+        постоянными рабочими местами до 850
+        местных специалистов. 30 процентов работников составляют женщины-домохозяйки и девушки, проживающие в
+        окрестностях предприятия из района Сино. Большинство женщин здесь занимаются технической работой — монтажом
+        электрооборудования. В ходе строительства предприятия более 300 строителей получили рабочие места и
+        достойную зарплату.</p>
+    <!-- Add other text paragraphs here -->
+    <p class="text-gray-700 text-lg mb-4">На созданном предприятии на 16 производственных линиях будут производиться
+        36 видов продукции, в том числе
+        интеллектуальных счётчиков электроэнергии, комплектных плат 0,4; 6 и 10 кВ, дополненных станций
+        трансформаторов 6/10 и 20 кВ, лифтов, железных дверных проёмов, электрических и солнечных водонагревателей,
+        столбов высоковольтных воздушных линий, заградительных стен автомобильных дорог, автоматических
+        выключателей, различных железных опор для освещения скверов, двуствольных балок, будет проводиться обработка
+        различных конструкций.</p>
+    <!-- Grid for Images -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+        <!-- First Image -->
+        <img src="{% static 'images/second_image.jpg' %}" style="height: 100%;" alt="Image 1" class="image-item">
+        <!-- Second Image -->
+        <img src="{% static 'images/third_image.jpg' %}" alt="Image 2" class="image-item">
+        <!-- Third Image -->
+        <img src="{% static 'images/forth_image.jpg' %}" alt="Image 3" class="image-item">
+        <!-- Fourth Image -->
+        <img src="{% static 'images/fifth_image.jpg' %}" alt="Image 4" class="image-item">
+        <!-- Fifth Image -->
+        <img src="{% static 'images/sixth_image.jpg' %}" alt="Image 5" class="image-item">
+        <!-- Sixth Image -->
+        <img src="{% static 'images/seventh_image.jpg' %}" alt="Image 6" class="image-item">
+        <!-- Seventh Image -->
+        <img src="{% static 'images/13_image.jpg' %}" alt="Image 7" class="image-item">
+        <!-- Eighth Image -->
+        <img src="{% static 'images/eleventh_image.jpg' %}" alt="Image 8" class="image-item">
+    </div>
+    <!-- Remaining Text -->
+
+    <p class="text-gray-700 text-lg mb-4"> Производственная мощность предприятия в год составляет выпуск 300 000
+        интегральных электросчётчиков, 10 000
+        полномерных низковольтных пластин 0,4; 6 и 10 кВ, 600 дополненных трансформаторных станций 6 и 20 кВ, 24 000
+        железных дверей, 40 000 электрических и солнечных водонагревателей, 50 000 тонн железных столбов
+        высоковольтных линий, 130 000 метров заградительных стен автомобильных дорог, 500 000 автоматических
+        выключателей для освещения, 10 000 железных столбов для освещения, 12 000 тонн двустворчатых балок и 20 000
+        тонн различных железных конструкций.</p>
+    <p class="text-gray-700 text-lg mb-4">
+        На предприятии производится 500 лифтов в год, в сборке которых используется 40 процентов запасных частей от
+        отечественных предприятий.
+
+    </p>
+    <p class="text-gray-700 text-lg mb-4">
+        Продукция, производимая предприятием, обладает высоким качеством и конкурентоспособностью, на внутреннем
+        рынке спрос на неё весьма высок.
+
+    </p>
+
+    <p class="text-gray-700 text-lg mb-4">
+        На предприятии представлены современные технологические линии с управлением цифровым программированием от
+        ведущих производителей Италии, Финляндии, Германии, Турции и Китая.
+    </p>
+
+    <p class="text-gray-700 text-lg mb-4">
+        Новый объект имеет 4 цеха, в том числе по совершенствованию электрооборудования, обработке стальных листов,
+        обработке железных конструкций и цинкованию.
+
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+        <!-- First Image -->
+        <img src="{% static 'images/14_image.jpg' %}" style="height: 100%;" alt="Image 1" class="image-item">
+        <!-- Second Image -->
+        <img src="{% static 'images/15_image.jpg' %}" alt="Image 2" class="image-item">
+        <!-- Third Image -->
+        <img src="{% static 'images/16_image.jpg' %}" alt="Image 3" class="image-item">
+        <!-- Fourth Image -->
+        <img src="{% static 'images/17_image.jpg' %}" alt="Image 4" class="image-item">
+    </div>
+
+    <p class="text-gray-700 text-lg mb-4">
+        Просторные цеха возводятся с использованием железных конструкций и качественных сэндвичевых пластин. <br>
+
+        В ходе ознакомления с ходом производства предприятия Президент Республики Таджикистан уважаемый Эмомали
+        Рахмон высоко оценил современное оборудование нового предприятия и его продукцию, дал полезные рекомендации
+        ответственным лицам по обеспечению эффективности деятельности, производству качественной продукции,
+        увеличению объёма производства, повышению конкурентоспособности производственной продукции.
+    </p>
+
+    Просторные цеха возводятся с использованием железных конструкций и качественных сэндвичевых пластин. <br>
+
+    В ходе ознакомления с ходом производства предприятия Президент Республики Таджикистан уважаемый Эмомали
+    Рахмон высоко оценил современное оборудование нового предприятия и его продукцию, дал полезные рекомендации
+    ответственным лицам по обеспечению эффективности деятельности, производству качественной продукции,
+    увеличению объёма производства, повышению конкурентоспособности производственной продукции.
+
+    <p class="text-gray-700 text-lg mb-4">
+
+        После ознакомления с ходом производства Президент Республики Таджикистан уважаемый Эмомали Рахмон посетил
+        выставку продукции предприятия.
+        <br>
+        На выставке были представлены скамейки, столбы для скверов и проспектов, украшения из стальных листов,
+        железные вазы, полномерные трансформаторные станции, столбы высоковольтных воздушных линий, заградительные
+        стены для автомобильных дорог и другие виды металлических изделий.
+        <br>
+        Лидер нации уважаемый Эмомали Рахмон в ходе посещения выставки производственной продукции предприятия
+        выразил удовлетворение поддержкой созидательной политики Правительства Республики Таджикистан в направлении
+        ускоренной индустриализации страны отечественными предпринимателями.
+    </p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+        <!-- First Image -->
+        <img src="{% static 'images/18_image.jpg' %}" style="height: 100%;" alt="Image 1" class="image-item">
+        <!-- Second Image -->
+        <img src="{% static 'images/19_image.jpg' %}" alt="Image 2" class="image-item">
+        <!-- Third Image -->
+        <img src="{% static 'images/showroom.jpg' %}" alt="Image 3" class="image-item">
+        <!-- Fourth Image -->
+        <img src="{% static 'images/showroom_1.jpg' %}" alt="Image 4" class="image-item">
+    </div>
+</div>
+<!-- <div id="about" class="mb-16">
+    <h2 class="text-3xl font-bold text-center mb-8">О нашем заводе</h2>
+    <p class="text-gray-700 text-lg mb-4">Предприятие возведено на площади 7 гектаров земли в соответствии с
+        современными нормами и международными стандартами, а здания под строительство составляют 40 тысяч квадратных
+        метров.</p>
+    <p class="text-gray-700 text-lg mb-4">После возведения предприятия здесь появилась возможность обеспечить
+        постоянными рабочими местами до 850
+        местных специалистов. 30 процентов работников составляют женщины-домохозяйки и девушки, проживающие в
+        окрестностях предприятия из района Сино. Большинство женщин здесь занимаются технической работой — монтажом
+        электрооборудования. В ходе строительства предприятия более 300 строителей получили рабочие места и
+        достойную зарплату.</p>
+    
+
+</div> -->
+
+<!-- Products Section -->
+<div id="products" class="mb-16">
+    <h2 class="text-3xl font-bold text-center mb-8">Наши продукты</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {% for product in products|slice:":6" %}
+        <div class="bg-white shadow-lg rounded-lg p-6">
+            <a href="{% url 'shopapp:product_detail' product.pk %}">
+                {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.name }}"
+                    class="w-full h-48 object-cover mb-4 rounded">
+                {% else %}
+                <img src="https://via.placeholder.com/400" alt="{{ product.name }}"
+                    class="w-full h-48 object-cover mb-4 rounded">
+                {% endif %}
+                <h2 class="text-xl font-bold mb-2">{{ product.name }}</h2>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="text-center mt-6">
+        <a href="{% url 'shopapp:product' %}" class="text-blue-500 hover:text-blue-700">View More Products</a>
+    </div>
+</div>
+</div>
+
+
+{% endblock container %}

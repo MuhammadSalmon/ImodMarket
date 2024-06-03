@@ -1,0 +1,41 @@
+{% extends 'shopapp/base.html' %}
+<!-- registration/register.html -->
+{% block container %}
+<div class="flex justify-center items-center h-screen bg-gray-100">
+    <div class="container mx-auto px-4 bg-white rounded-lg shadow-md p-8 max-w-md">
+        <h2>Register</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+        </form>
+        <p class="text-center text-gray-500 text-xs mt-4">&copy; 2024 Your Company. All rights reserved.</p>
+        <div class="text-center mt-4">
+            <p class="text-sm">Already have an account?
+                <a href="{% url 'myaccount:login' %}" class="text-blue-500 hover:text-blue-700 font-semibold">Login
+                    here</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Custom CSS for input fields */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="file"] {
+        width: 90%;
+        margin: auto;
+        border: 1px solid #cbd5e0;
+        /* Border color */
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        display: block;
+        box-sizing: border-box;
+    }
+</style>
+
+
+
+{% endblock %}

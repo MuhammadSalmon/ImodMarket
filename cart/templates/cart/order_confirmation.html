@@ -1,0 +1,21 @@
+<!-- cart/templates/cart/order_confirmation.html -->
+{% extends "shopapp/base.html" %}
+
+{% block container %}
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-2xl font-bold mb-4">Подтверждение заказа</h1>
+    <p>Спасибо за ваш заказ, {{ order.full_name }}!</p>
+    <p>Мы получили ваш заказ и скоро обработаем его.</p>
+    <h2 class="text-xl font-bold mb-2">Детали заказа</h2>
+    <ul>
+        {% for item in order_items %}
+        <li>{{ item.product.name }} ({{ item.quantity }}) - ${{ item.total_price }}</li>
+        {% endfor %}
+    </ul>
+    <p>Всего: ${{ total_cost }}</p>
+</div>
+{% endblock %}
+
+Спасибо за ваш заказ, Сомон Саидов!
+
+Мы получили ваш заказ и скоро обработаем его.
